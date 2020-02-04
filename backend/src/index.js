@@ -5,11 +5,10 @@ const routes = require('./routes')
 
 const app = express();
 
-app.get('/', (request, response) => {
-    return response.json({
-        message: 'Hello World, man'
-    });
-});
+mongoose.connect('mongodb://ddr9$#base7*&a:Jp7k8DhmYd7$#*jee@localhost:27017/pva?authSource=admin&authMechanism=SCRAM-SHA-1', { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
 
 app.use(cors())
 app.use(express.json())
